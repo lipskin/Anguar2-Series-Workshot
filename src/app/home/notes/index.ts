@@ -12,10 +12,12 @@ export class Notes {
   notes = [
     {
       title: 'n',
-      value: 'v'
+      value: 'v',
+      color: 'rgb(255, 209, 128)'
     }, {
       title: 'n1',
-      value: 'v1'
+      value: 'v1',
+      color: 'rgb(204, 255, 144)'
     }
   ]
 
