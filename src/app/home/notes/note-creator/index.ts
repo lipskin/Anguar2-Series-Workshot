@@ -1,4 +1,5 @@
-import  { Component, Output, EventEmitter } from '@angular/core'
+import { Component, Output, EventEmitter } from '@angular/core'
+import { isEmpty } from 'lodash'
 
 @Component({
   selector: 'note-creator',
@@ -12,8 +13,13 @@ export class NoteCreator {
 
   createNote() {
     const { title, value } = this.newNote;
+    if(isEmpty(title) || isEmpty(value)) {
+      return false;
+    }
 
     this.onCreateNote.emit({ title, value });
+
+    this.newNote = { title: '', value: ''};
     return false;
   }
 }
