@@ -1,0 +1,29 @@
+<div class="note-creator shadow-2">
+  <form class="row">
+    <input
+      type="text"
+      name="newNoteTitle"
+      placeholder="Title"
+      class="col-xs-10 title"
+      autocomplete="off"
+      [(ngModel)]="newNote.title"
+    />
+    <input
+      type="text"
+      name="newNoteValue"
+      placeholder="Take a note..."
+      class="col-xs-10"
+      autocomplete="off"
+      [(ngModel)]="newNote.value"
+    />
+    <div class="actions col-xs-12 row between-xs">
+      <button
+        type="submit"
+        class="btn-light"
+        (click)="createNote()"
+       >
+        Done
+      </button>
+    </div>
+  </form>
+</div>
