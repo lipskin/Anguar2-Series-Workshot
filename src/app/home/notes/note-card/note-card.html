@@ -1,4 +1,6 @@
-<div class="note-card row shadow-1">
+<div 
+    class="note-card row shadow-1"
+    [ngStyle]="{'background-color': note.color}">
     <div class="icon" (click)="onChecked()">
         <i class="material-icons">check</i>
     </div>
