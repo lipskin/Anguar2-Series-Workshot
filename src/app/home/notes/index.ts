@@ -17,7 +17,7 @@ export class Notes {
       .subscribe(res => this.notes = res.data)
   }
 
-  checkCard(note, i) {
+  checkCard(note) {
     this.noteService.completeNote(note)
       .subscribe(note => {
 
