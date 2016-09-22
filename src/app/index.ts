@@ -1,4 +1,5 @@
 export {App} from './app'
+export {router} from './routes'
 
 import * as services from './shared/services'
 
