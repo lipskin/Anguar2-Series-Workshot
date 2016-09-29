@@ -4,7 +4,7 @@ import { ApiService } from './api'
 import { Observable } from 'rxjs/Observable'
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class AuthService implements CanActivate {
     JWT_KEY: string = 'retain_token'
     user: any
 

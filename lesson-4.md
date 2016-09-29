@@ -31,3 +31,6 @@
 
 - Create file `auth.component.css` in `src/app/auth` and paste content;
 - Replace the content of `auth.component.html` by pasting;
+- Add properties to `auth.component.ts`;
+- Add `ngOnInit` method to `auth.component.ts`;
+- Add `changeMode` method to `auth.component.ts`;
