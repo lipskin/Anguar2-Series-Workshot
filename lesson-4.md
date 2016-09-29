@@ -34,3 +34,4 @@
 - Add properties to `auth.component.ts`;
 - Add `ngOnInit` method to `auth.component.ts`;
 - Add `changeMode` method to `auth.component.ts`;
+- Add variables to `auth.component.html`;
