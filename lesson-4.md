@@ -1,6 +1,6 @@
-#Steps
+# Steps
 
-##Part 1
+## Part 1
 
 - Create folder `auth` in `src/app`;
 - Create file `auth.component.ts`, `auth.component.html` and `index.ts` in `src/app/auth`;
@@ -11,6 +11,12 @@
 - Remove `<app-bar>` in `app.html`;
 - Change routerLink in `app-bar.html`;
 - Extract routes for `Home` and `About` to children of `Main`;
-- Create file `auth-guard.service.ts` in `src/app/shared/services`;
+- Create file `auth.service.ts` in `src/app/shared/services`;
 - Export `AuthGuard` in `src/app/shared/index.ts`;
 - Add `canActivate` guard in route of `Main`;
+
+## Part 2
+
+- Add `--auth` in the api script;
+- Add `setHeaders` method in ApiService;
+- Add `setJWT` method in AuthService;
