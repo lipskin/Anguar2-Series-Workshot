@@ -1,5 +1,5 @@
 <div class="auth row center-xs middle-xs">
-    <form class="col-xs-6 shadow-2">
+    <form class="col-xs-6 shadow-2" #authForm="ngForm">
         <div class="inputs row center-xs middle-xs">
             <h3 class="col-xs-8 title">{{ mode }}</h3>
             <input class="col-xs-8" type="email" name="email" placeholder="email" required
@@ -12,7 +12,7 @@
             <div class="error" [hidden]="password.pristine || password.valid">password is required</div>
             <div class="actions col-xs-12">
                 <div class="row center-xs">
-                    <button type="submit" class="btn-light"> {{ mode }}</button>
+                    <button type="submit" class="btn-light" [disabled]="!authForm.form.valid"> {{ mode }}</button>
                     <a (click)="changeMode()" class="btn-light link">{{ linkText }}</a>
                 </div>
             </div>
