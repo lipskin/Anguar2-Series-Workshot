@@ -26,3 +26,8 @@
 - Add logic in constructor in AuthService;
 - Add `authenticate` method in AuthService;
 - Add `signout` method in AuthService;
+
+## Part 3
+
+- Create file `auth.component.css` in `src/app/auth` and paste content;
+- Replace the content of `auth.component.html` by pasting;
