@@ -8,4 +8,6 @@
 - Add a route in `src/app/routes.ts`;
 - Create folder `main` in `src/app`;
 - Create file `main.component.ts`, `main.component.html` and `index.ts` in `src/app/main`;
-
+- Remove `<app-bar>` in `app.html`;
+- Change routerLink in `app-bar.html`;
+- Extract routes for `Home` and `About` to children of `Main`;
