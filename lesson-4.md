@@ -12,6 +12,9 @@
 - Change routerLink in `app-bar.html`;
 - Extract routes for `Home` and `About` to children of `Main`;
 - Create file `auth.service.ts` in `src/app/shared/services`;
+- Add `JWT_KEY` property to `auth.service.ts`;
+- Add `isAuthorized` method to `auth.service.ts`;
+- Add `canActivate` method to `auth.service.ts`;
 - Export `AuthGuard` in `src/app/shared/index.ts`;
 - Add `canActivate` guard in route of `Main`;
 
@@ -20,3 +23,6 @@
 - Add `--auth` in the api script;
 - Add `setHeaders` method in ApiService;
 - Add `setJWT` method in AuthService;
+- Add logic in constructor in AuthService;
+- Add `authenticate` method in AuthService;
+- Add `signout` method in AuthService;
