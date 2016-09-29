@@ -3,8 +3,8 @@ import { AuthService } from '../shared/services/auth.service'
 import { Router } from '@angular/router'
 
 const linkTexts = {
-    signin: `Don't have an account?`,
-    signup: `Already have an account?`,
+    signIn: `Don't have an account?`,
+    signUp: `Already have an account?`,
 }
 
 @Component({
@@ -14,7 +14,7 @@ const linkTexts = {
 })
 export class AuthComponent implements OnInit {
     user: { email: string, password: string }
-    mode: 'signin' | 'signup'
+    mode: 'signIn' | 'signUp'
     linkText: string
 
     constructor(
@@ -24,17 +24,17 @@ export class AuthComponent implements OnInit {
 
     ngOnInit(): void {
         this.user = { email: '', password: '' }
-        this.mode = 'signin'
-        this.linkText = linkTexts.signin
+        this.mode = 'signIn'
+        this.linkText = linkTexts.signIn
     }
 
     changeMode(): void {
-        if (this.mode === 'signin') {
-            this.mode = 'signup'
-            this.linkText = linkTexts.signup
+        if (this.mode === 'signIn') {
+            this.mode = 'signUp'
+            this.linkText = linkTexts.signUp
         } else {
-            this.mode = 'signin'
-            this.linkText = linkTexts.signin
+            this.mode = 'signIn'
+            this.linkText = linkTexts.signIn
         }
     }
 

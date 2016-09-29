@@ -36,4 +36,5 @@
 - Add `changeMode` method to `auth.component.ts`;
 - Add variables to `auth.component.html`;
 - Add `authenticate` method to `auth.component.ts`;
-
+- Add `signOut` method to `app-bar/index.ts`;
+- Add `(click)` listener to `app-bar.html`;
