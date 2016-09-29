@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { AuthService } from '../shared/services/auth.service'
+import { Router } from '@angular/router'
 
 const linkTexts = {
     signin: `Don't have an account?`,
@@ -15,7 +17,10 @@ export class AuthComponent implements OnInit {
     mode: 'signin' | 'signup'
     linkText: string
 
-    constructor() { }
+    constructor(
+        private router: Router,
+        private authService: AuthService
+    ) { }
 
     ngOnInit(): void {
         this.user = { email: '', password: '' }
@@ -31,5 +36,10 @@ export class AuthComponent implements OnInit {
             this.mode = 'signin'
             this.linkText = linkTexts.signin
         }
+    }
+
+    authenticate(): void {
+        this.authService.authenticate(this.mode, this.user)
+            .subscribe(() => this.router.navigate(['/']))
     }
 }
