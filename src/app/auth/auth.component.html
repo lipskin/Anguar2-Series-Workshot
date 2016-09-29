@@ -4,9 +4,9 @@
             <h3 class="col-xs-8 title">
                 {{ mode }}
             </h3>
-            <input class="col-xs-8" type="email" name="email" placeholder="email">
+            <input [(ngModel)]="user.email" class="col-xs-8" type="email" name="email" placeholder="email">
             <div class="error">email is invalid</div>
-            <input class="col-xs-8" type="password" name="password" placeholder="password">
+            <input [(ngModel)]="user.password" class="col-xs-8" type="password" name="password" placeholder="password">
             <div class="error">password is required</div>
             <div class="actions col-xs-12">
                 <div class="row center-xs">
