@@ -11,3 +11,6 @@
 - Remove `<app-bar>` in `app.html`;
 - Change routerLink in `app-bar.html`;
 - Extract routes for `Home` and `About` to children of `Main`;
+- Create file `auth-guard.service.ts` in `src/app/shared/services`;
+- Export `AuthGuard` in `src/app/shared/index.ts`;
+- Add `canActivate` guard in route of `Main`;
