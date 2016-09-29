@@ -1,5 +1,5 @@
 <div class="auth row center-xs middle-xs">
-    <form class="col-xs-6 shadow-2" #authForm="ngForm">
+    <form class="col-xs-6 shadow-2" (submit)="authenticate()" #authForm="ngForm">
         <div class="inputs row center-xs middle-xs">
             <h3 class="col-xs-8 title">{{ mode }}</h3>
             <input class="col-xs-8" type="email" name="email" placeholder="email" required
