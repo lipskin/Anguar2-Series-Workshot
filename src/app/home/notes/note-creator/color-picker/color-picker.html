@@ -1,0 +1,11 @@
+<div class="color-selector">
+  <i class="material-icons icon" (click)="isFocus=true">color_lens</i>
+  <div class="selector row center-xs" *ngIf="isFocus">
+    <div 
+      *ngFor="let color of colors" 
+      [ngStyle]="{'background-color': color}" 
+      class="color"
+      (click)="pickColor(color)"
+    ></div>
+  </div>
+</div>
