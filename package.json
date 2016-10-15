@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --config webpack.spec.ts --progress --color && karma start",
+    "test": "karma start",
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
     "api": "angularclass-server --api retain --port 3500"
   },
@@ -34,6 +34,7 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-mocha-reporter": "^2.0.4",
+    "karma-webpack": "^1.8.0",
     "raw-loader": "^0.5.1",
     "to-string-loader": "^1.1.4",
     "ts-helpers": "^1.1.1",
