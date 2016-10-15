@@ -1,6 +1,7 @@
 import {Response, Http, Headers} from '@angular/http'
 import {Injectable} from '@angular/core'
 import {Observable} from 'rxjs'
+import { toPairs } from 'lodash'
 
 @Injectable()
 export class ApiService {
@@ -53,6 +54,6 @@ export class ApiService {
   }
 
   setHeaders(headers: { [key: string]: string }): void {
-    Object.entries(headers).forEach(([key, value]) => this.headers.set(key, value))
+    toPairs(headers).forEach(([key, value]) => this.headers.set(key, value))
   }
 }
