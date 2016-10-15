@@ -19882,12 +19882,12 @@ declare module "lodash/zipWith" {
 /**
 * uncoment it if definition exists
 */
-
+/*
 declare module "lodash/entries" {
    const entries: typeof _.entries;
    export = entries;
 }
-
+*/
 /**
 * uncoment it if definition exists
 */
