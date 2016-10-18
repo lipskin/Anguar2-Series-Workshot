@@ -15,6 +15,8 @@ import { setBaseTestProviders } from '@angular/core/testing';
 import { TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS } from '@angular/platform-browser-dynamic/testing';
 
 
+declare var require;
+
 var testsContext = require.context("..", true, /spec\.ts$/);
 testsContext.keys().forEach(testsContext);
 
