@@ -1,1 +1,1 @@
-export * from './main.component'
+export { MainComponent } from './main.component'
