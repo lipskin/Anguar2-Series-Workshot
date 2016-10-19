@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 var config = {
   cache: true,
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
 
   module: {
     loaders: [

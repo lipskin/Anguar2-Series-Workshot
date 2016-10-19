@@ -1,12 +1,11 @@
 import { isEmpty } from 'lodash';
 import { NoteCard } from './index.ts'
-import { TestComponentBuilder, ComponentFixture }from '@angular/compiler/testing';
-import { inject } from '@angular/core/testing';
+import { inject, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core'
-import { By } from '@angular/platform-browser'
+import { ComponentFixture } from '@angular/core/testing/component_fixture'
+import { By, BrowserModule } from '@angular/platform-browser'
 
 @Component({
-  directives: [ NoteCard ],
   template: '<note-card [note]="note" (checked)="onCheck($event)"></note-card>'
 })
 class TestComponent{
@@ -22,11 +21,16 @@ class TestComponent{
 }
 
 describe("NoteCard", ()=>{
-  let fixture:ComponentFixture<TestComponent>;
+  let fixture: ComponentFixture<TestComponent>;
 
-  beforeEach(inject([TestComponentBuilder], (builder:TestComponentBuilder)=>{
-    fixture = builder.createSync(TestComponent)
-  }))
+  beforeEach(()=>{
+    TestBed.configureTestingModule({
+      declarations: [ TestComponent, NoteCard ],
+      imports: [ BrowserModule ]
+    })
+
+    fixture = TestBed.createComponent(TestComponent);
+  })
 
   it("the componet should have a title", ()=>{
     fixture.detectChanges();

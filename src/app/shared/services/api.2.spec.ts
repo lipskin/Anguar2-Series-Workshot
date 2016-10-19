@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs/Observable';
 import { ApiService } from './api';
-import { inject, async, addProviders } from '@angular/core/testing'
+import { inject, async, TestBed } from '@angular/core/testing'
 import { MockBackend } from '@angular/http/testing'
 import { BaseRequestOptions, Http, ResponseOptions, Response } from '@angular/http'
 
@@ -8,13 +8,23 @@ import { BaseRequestOptions, Http, ResponseOptions, Response } from '@angular/ht
 describe("ApiSevive", ()=>{
   let http, api;
 
-  beforeEach(()=>addProviders([
-    ApiService,
-    {
-      provide: Http,
-      useFactory: () => jasmine.createSpyObj("Http", ["get"])
-    }
-  ]))
+  // beforeEach(()=>addProviders([
+  //   ApiService,
+  //   {
+  //     provide: Http,
+  //     useFactory: () => jasmine.createSpyObj("Http", ["get"])
+  //   }
+  // ]))
+
+  beforeEach(()=>{
+    TestBed.configureTestingModule({
+      providers: [ MockBackend, BaseRequestOptions, ApiService, 
+      {
+        provide: Http,
+        useFactory: () => jasmine.createSpyObj("Http", ["get"])
+      }]
+    })
+  })
 
   beforeEach(inject([ApiService, Http], (apiService, httpService)=>{
     api = apiService;
